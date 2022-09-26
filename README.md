@@ -1,7 +1,7 @@
 
 # Music Recommendation App
 
-A web app,which suggests you songs based on your selected genre.
+A web app,which suggests you songs based on some selected genre.
 This project is a part of neogCamp level zero.
 
 
