@@ -4,59 +4,71 @@ var musicCollection = {
   Rock: [
     {
       name: "PinkFloyd",
-      song: "Song: Money"
+      song: "Song: Money",
+      rating: "rating:⭐⭐⭐⭐⭐",
     },
     {
       name: "Arctic Monkeys",
-      song: "Song: Do I Wanna Know?"
+      song: "Song: Do I Wanna Know?",
+      rating: "rating:⭐⭐⭐⭐",
     },
     {
       name: "Led Zeppelin",
-      song: "Stairway to Heaven"
-    }
+      song: "Stairway to Heaven",
+      rating: "rating:⭐⭐⭐⭐⭐",
+    },
   ],
   Electronic: [
     {
       name: "Avicii",
-      song: "Song: Waiting For Love"
+      song: "Song: Waiting For Love",
+      rating: "rating:⭐⭐⭐⭐",
     },
     {
       name: "Ritviz",
-      song: "Song: Udd Gaye"
+      song: "Song: Udd Gaye",
+      rating: "rating:⭐⭐⭐",
     },
     {
       name: "Nucleya",
-      song: "Bhayanak Atma"
-    }
+      song: "Bhayanak Atma",
+      rating: "rating:⭐⭐⭐",
+    },
   ],
   Indie: [
     {
       name: "Lucky Ali",
-      song: "Song: O Sanam"
+      song: "Song: O Sanam",
+      rating: "rating:⭐⭐⭐⭐",
     },
     {
       name: "The Local Train",
-      song: "Song: Choo lo"
+      song: "Song: Choo lo",
+      rating: "rating:⭐⭐⭐",
     },
     {
       name: "Euphoria",
-      song: "Maeri"
-    }
+      song: "Maeri",
+      rating: "rating:⭐⭐⭐⭐",
+    },
   ],
   Bengali: [
     {
       name: "Moheener Ghoraguli",
-      song: "Song: Hay Bhalobasha"
+      song: "Song: Hay Bhalobasha",
+      rating: "rating:⭐⭐⭐⭐⭐",
     },
     {
       name: "Chandrabindoo",
-      song: "Song: Eita Tomar Gaan"
+      song: "Song: Eita Tomar Gaan",
+      rating: "rating:⭐⭐⭐",
     },
     {
       name: "Anjan Dutt",
-      song: "Purono Guitar"
-    }
-  ]
+      song: "Purono Guitar",
+      rating: "rating:⭐⭐⭐⭐",
+    },
+  ],
 };
 
 var musicDB = Object.keys(musicCollection);
@@ -68,7 +80,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>goodMusic</h1>
+      <h1>
+        goodMusic <span>🎧</span>{" "}
+      </h1>
       <p style={{ fontSize: "0.9rem", textALign: "left" }}>
         Checkout some of my favourite Bands.Select genre to proceed.
       </p>
@@ -84,7 +98,7 @@ export default function App() {
               borderRadius: "0.5rem",
               maxWidth: "100%",
               cursor: "pointer",
-              color: "#fff"
+              color: "#fff",
             }}
             onClick={() => genreClickHandler(genre)}
           >
@@ -105,12 +119,13 @@ export default function App() {
                 margin: "0.8rem 0rem",
                 listStyle: "none",
                 maxWidth: "300px",
-                borderRadius: "0.5rem"
+                borderRadius: "0.5rem",
               }}
               key={band.name}
             >
               <div style={{ fontSize: "1.25rem" }}>{band.name}</div>
               <div style={{ fontSize: "0.8rem" }}>{band.song}</div>
+              <div style={{ fontSize: "0.8rem" }}>{band.rating}</div>
             </li>
           ))}
         </ul>
